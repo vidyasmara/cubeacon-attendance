@@ -45,7 +45,7 @@ class Auth extends CI_Controller
                 ];
 
                 #memasukkan data di atas ke session
-                redirect(base_url('user'))
+                redirect(base_url('user'));
 
                 #jika password salah
             } else {
