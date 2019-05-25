@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/cubetendance/';
+$config['base_url'] = 'cubetendance.lesinaja.id/';
 
 /*
 |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ $config['uri_protocol']    = 'REQUEST_URI';
 |
 | https://codeigniter.com/user_guide/general/urls.html
 */
-$config['url_suffix'] = 'http://localhost/cubetendance/';
+$config['url_suffix'] = 'cubetendance.lesinaja.id/';
 
 /*
 |--------------------------------------------------------------------------
