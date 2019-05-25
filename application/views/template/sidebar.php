@@ -17,7 +17,7 @@
 
         <!-- Nav Item - Dashboard -->
         <div class="container">
-            <img src="<?= base_url('') ?>img/default.jpg" class="img-thumbnail" alt="default" width="304" height="236">
+            <img src="<?= base_url('') ?>assets/img/default.jpg" class="img-thumbnail" alt="default" width="304" height="236">
         </div>
 
         <!-- Divider -->
