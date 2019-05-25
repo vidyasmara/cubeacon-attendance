@@ -12,6 +12,17 @@
             <div class="sidebar-brand-text mx-3">Cubetendance</div>
         </a>
 
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <div class="container">
+            <img src="img/default.jpg" class="img-thumbnail" alt="default" width="304" height="236">
+        </div>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
         <?php
         $role_id = $this->session->userdata('role_id');
         $queryMenu = "SELECT `user_menu`.`id`,`menu`
@@ -53,6 +64,13 @@
             <!-- Divider -->
             <hr class="sidebar-divider mt-3">
         <?php endforeach; ?>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="modal" data-target="#logoutModal">
+                <i class="fas fa-fw fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </li>
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
