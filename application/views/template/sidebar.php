@@ -36,11 +36,9 @@
         </div>
 
         <?php
-        $menuId = $m['id'];
+        $menuId = $menu['id'];
         $querySubMenu = "SELECT *
                     FROM `user_sub_menu`
-                    WHERE `menu_id` = $menuId
-                    AND `is_active` = 1
                     ";
         $SubMenu = $this->db->query($querySubMenu)->result_array();
         ?>
