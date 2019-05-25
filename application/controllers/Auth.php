@@ -31,7 +31,7 @@ class Auth extends CI_Controller
         $password = $this->input->post('password');
 
         #query data select * from user where 'email'='$email'
-        $user = $this->db->get_where('db_user', ['username' => $username])->row_array();
+        $user = $this->db->get_where('tb_user', ['nrp' => $username])->row_array();
 
         #jika data user ditemukan
         if ($user) {
