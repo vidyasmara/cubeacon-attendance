@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-2">
-                                <img src="img/default.jpg" class="card-img">
+                                <img src="<?= base_url('assets/') ?>img/default.jpg" class="card-img">
                             </div>
                             <div class="col-lg-8">
                                 <p class="card-text">Name : </p>
@@ -51,7 +51,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-2">
-                                <img src="img/default.jpg" class="card-img">
+                                <img src="<?= base_url('assets/') ?>img/default.jpg" class="card-img">
                             </div>
                             <div class="col-lg-8">
                                 <p class="card-text">Name : </p>
