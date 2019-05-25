@@ -22,7 +22,7 @@
                             </div>
                             <div class="col-lg-8">
                                 <p class="card-text">Name : <?= $this->session->userdata('nama'); ?></p>
-                                <p class="card-text">NRP : <?= $this->session->userdata('username'); ?></p>
+                                <p class="card-text">NRP : <?= $this->session->userdata('nrp'); ?></p>
                                 <p class="card-text">Email : <?= $email; ?></p>
                             </div>
                         </div>
