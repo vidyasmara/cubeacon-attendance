@@ -43,7 +43,7 @@ class Auth extends CI_Controller
                     'role_id' => $user['role_id'],
                     'nama' => $user['nama']
                 ];
-
+                $this->session->set_userdata($data);
                 #memasukkan data di atas ke session
                 redirect(base_url('user'));
 
