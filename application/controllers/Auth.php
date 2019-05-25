@@ -59,7 +59,7 @@ class Auth extends CI_Controller
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
                     Wrong password!
                     </div>');
-                redirect(base_url('auth/login'));
+                redirect(base_url(''));
             }
 
             #jika data user tidak ditemukan
@@ -67,7 +67,7 @@ class Auth extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
             Username is not registered!
             </div>');
-            redirect(base_url('auth/login'));
+            redirect(base_url(''));
         }
     }
 }
