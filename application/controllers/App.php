@@ -6,6 +6,7 @@ class App extends CI_Controller
 
     public function index($mac_address)
     {
-        $this->load->view('app/index', $mac_address);
+        $data["mac_address"] = $mac_address;
+        $this->load->view('app/index', $data);
     }
 }
