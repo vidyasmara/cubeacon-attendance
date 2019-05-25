@@ -1,4 +1,6 @@
-<?php if ($this->session->userdata('role_id') == 3) { ?>
+<?php if ($this->session->userdata('role_id') == 3) {
+    var_dump($this->session->userdata('role_id'));
+    die; ?>
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
