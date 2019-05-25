@@ -32,17 +32,16 @@ class Auth extends CI_Controller
 
         #query data select * from user where 'email'='$email'
         $user = $this->db->get_where('tb_user', ['nrp' => $username])->row_array();
-        var_dump($user);
-        die;
+
         #jika data user ditemukan
         if ($user) {
 
             #mengecek password
-            if ($password == $user['password']) {
+            if ($password == $user['pass']) {
                 $data = [
                     'username' => $user['username'],
                     'role_id' => $user['role_id'],
-                    'name' => $user['name']
+                    'nama' => $user['nama']
                 ];
 
                 #memasukkan data di atas ke session
