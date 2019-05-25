@@ -17,7 +17,7 @@ class User extends CI_Controller
     public function profile()
     {
         $data['title'] = "My Profile";
-        $user = $this->db->get_where('tb_user', ['nrp' => $this->session->userdata('username')])->result_array();
+        $user = $this->db->get_where('tb_user', ['nrp' => $this->session->userdata('nrp')])->result_array();
         var_dump($this->session->userdata('role_id'));
         die;
         $data['email'] = $user['email'];
@@ -31,7 +31,7 @@ class User extends CI_Controller
 
     public function changePassword()
     {
-        $data['user'] = $this->db->get_where('tb_user', ['nrp' => $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->get_where('tb_user', ['nrp' => $this->session->userdata('nrp')])->row_array();
         $data['title'] = 'Change Password';
 
         $this->form_validation->set_rules('current_password', 'Current Password', 'required|trim');
@@ -60,7 +60,7 @@ class User extends CI_Controller
                     redirect(base_url('user/changepassword'));
                 } else {
                     $this->db->set('password', $new_password);
-                    $this->db->where('nrp', $this->session->userdata('username'));
+                    $this->db->where('nrp', $this->session->userdata('nrp'));
                     $this->db->update('tb_user');
 
                     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">

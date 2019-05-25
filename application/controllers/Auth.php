@@ -39,7 +39,7 @@ class Auth extends CI_Controller
             #mengecek password
             if ($password == $user['pass']) {
                 $data = [
-                    'username' => $user['username'],
+                    'nrp' => $user['nrp'],
                     'role_id' => $user['role_id'],
                     'nama' => $user['nama']
                 ];
