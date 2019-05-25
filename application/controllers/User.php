@@ -18,7 +18,7 @@ class User extends CI_Controller
     {
         $data['title'] = "My Profile";
         $user = $this->db->get_where('tb_user', ['nrp' => $this->session->userdata('username')])->result_array();
-        var_dump($user);
+        var_dump($this->session->userdata('username'));
         die;
         $data['email'] = $user['email'];
         $this->load->view('template/header', $data);
@@ -39,11 +39,11 @@ class User extends CI_Controller
         $this->form_validation->set_rules('new_password2', 'Confirm New Password', 'required|trim|min_length[8]|matches[new_password1]');
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('templates/header', $data);
-            $this->load->view('templates/sidebar', $data);
-            $this->load->view('templates/topbar', $data);
+            $this->load->view('template/header', $data);
+            $this->load->view('template/sidebar', $data);
+            $this->load->view('template/topbar', $data);
             $this->load->view('user/changepassword', $data);
-            $this->load->view('templates/footer');
+            $this->load->view('template/footer');
         } else {
             $current_password = $this->input->post('current_password');
             $new_password = $this->input->post('new_password1');
