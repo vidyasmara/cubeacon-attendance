@@ -38,11 +38,11 @@ class Auth extends CI_Controller
         if ($user) {
 
             #mengecek password
-            if ($password == $user['password']) {
+            if ($password == $user['pass']) {
                 $data = [
                     'username' => $user['username'],
                     'role_id' => $user['role_id'],
-                    'name' => $user['name']
+                    'nama' => $user['nama']
                 ];
 
                 #memasukkan data di atas ke session
