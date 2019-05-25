@@ -17,6 +17,8 @@ class User extends CI_Controller
     public function profile()
     {
         $data['title'] = "My Profile";
+        $user = $this->db->get_where('tb_user', ['username' => $this->session->userdata('username')])->result_array();
+        $data['email'] = $user['email'];
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar', $data);
         $this->load->view('template/topbar', $data);
@@ -24,13 +26,47 @@ class User extends CI_Controller
         $this->load->view('template/footer', $data);
     }
 
-    public function changepassword()
+
+    public function changePassword()
     {
-        $data['title'] = "Change Password";
-        $this->load->view('template/header', $data);
-        $this->load->view('template/sidebar', $data);
-        $this->load->view('template/topbar', $data);
-        $this->load->view('user/changepassword', $data);
-        $this->load->view('template/footer');
+        $data['user'] = $this->db->get_where('tb_user', ['username' => $this->session->userdata('username')])->row_array();
+        $data['title'] = 'Change Password';
+
+        $this->form_validation->set_rules('current_password', 'Current Password', 'required|trim');
+        $this->form_validation->set_rules('new_password1', 'New Password', 'required|trim|min_length[8]|matches[new_password2]');
+        $this->form_validation->set_rules('new_password2', 'Confirm New Password', 'required|trim|min_length[8]|matches[new_password1]');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar', $data);
+            $this->load->view('templates/topbar', $data);
+            $this->load->view('user/changepassword', $data);
+            $this->load->view('templates/footer');
+        } else {
+            $current_password = $this->input->post('current_password');
+            $new_password = $this->input->post('new_password1');
+            if (!password_verify($current_password, $data['user']['password'])) {
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+                Wrong current password!
+                </div>');
+                redirect(base_url('user/changepassword'));
+            } else {
+                if ($current_password == $new_password) {
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+                    New password cannot be the same as current password!
+                    </div>');
+                    redirect(base_url('user/changepassword'));
+                } else {
+                    $this->db->set('password', $new_password);
+                    $this->db->where('email', $this->session->userdata('email'));
+                    $this->db->update('tb_user');
+
+                    $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+                    Password changed!
+                    </div>');
+                    redirect(base_url('user/changepassword'));
+                }
+            }
+        }
     }
 }
