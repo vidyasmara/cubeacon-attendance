@@ -30,10 +30,11 @@
                             <td><?= $ds['email']; ?></td>
                             <td><?= $ds['mac_address']; ?></td>
                         </tr>
-                    </thead>
-                </table>
-            </div>
+                    <?php endforeach; ?>
+                </thead>
+            </table>
         </div>
-        <!-- End of Content Wrapper -->
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- End of Content Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
