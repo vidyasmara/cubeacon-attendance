@@ -52,17 +52,16 @@
             <div class="col">
                 <div class="card shadow mb-4 border-left-primary">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Arief Kurniawan ST, MT.</h6>
+                        <h6 class="m-0 font-weight-bold text-primary"><?= $this->session->userdata('nama'); ?></h6>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-3">
-                                <img src="img/default.jpg" class="card-img">
+                                <img src="<?= base_url('assets/') ?>img/default.jpg" class="card-img">
                             </div>
                             <div class="col-lg-4">
-                                <p class="card-text">NIP : </p>
-                                <p class="card-text">Email : </p>
-                                <p class="card-text">Room/Office : </p>
+                                <p class="card-text">NIP : <?= $this->session->userdata('nrp'); ?></p>
+                                <p class="card-text">Email : <?php $user['email']; ?></p>
                             </div>
                         </div>
                         <div class="row mt-5 ml-3">
@@ -80,12 +79,17 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Jaringan Sensor Nirkabel dan IoT</td>
-                                        <td>A234</td>
-                                        <td>11.00 - 13.50</td>
-                                        <td>21</td>
-                                        <td><a class="btn btn-warning" href="detailmatkul.html">Detail</a></td>
+                                        <?php $i = 0; ?>
+                                        <?php foreach ($matkul as $mk) : ?>
+                                            <?php $i++;
+                                            $detMk = $this->db->get_where('tb_matakuliah', ['id_matkul' => $mk['id_matkul']])->row_array(); ?>
+                                            <td><?= $i; ?></td>
+                                            <td><?= $detMk['nama_matkul']; ?></td>
+                                            <td><?= $detMk['ruang']; ?></td>
+                                            <td><?= $detMk['waktu_mulai']; ?>.00 - <?= $detMk['waktu_selesai']; ?>.50</td>
+                                            <td>21</td>
+                                            <td><a class="btn btn-warning" href="<?= base_url('dosen/') ?>detailmatkul.php">Detail</a></td>
+                                        <?php endforeach; ?>
                                     </tr>
                                 </tbody>
                             </table>
