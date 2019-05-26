@@ -20,12 +20,12 @@
                         </tr>
                         <?php foreach ($matkul as $mk) : ?>
                             <tr>
-                                <td><?= $mk['id_matkul']; ?></td>
+                                <?php $nama_matkul = $this->db->get_where('tb_matakuliah', ['id_matkul' => $mk['id_matkul']])->row_array(); ?>
+                                <td><?= $nama_matkul['nama_matkul']; ?></td>
                                 <?php foreach ($absen as $a) { ?>
                                     <?php if ($a['id_matkul'] == $mk['id_matkul']) {
-                                        $nama_matkul = $this->db->get_where('tb_matakuliah', ['id_matkul' => $a['id_matkul']])->row_array();
                                         ?>
-                                        <td><?= $nama_matkul['nama_matkul']; ?></td>
+                                        <td><?= $a['id_matkul']; ?></td>
                                     <?php } ?>
                                 <?php } ?>
                             </tr>
