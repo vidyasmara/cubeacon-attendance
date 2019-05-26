@@ -11,8 +11,6 @@ class User extends CI_Controller
         if ($this->session->userdata('role_id') == 3) {
             $data['matkul'] = $this->db->get_where('tb_mhs_matkul', ['nrp' => $this->session->userdata('nrp')])->result_array();
             $data['absen'] = $this->db->get_where('tb_absen', ['nrp' => $this->session->userdata('nrp')])->result_array();
-            var_dump($data);
-            die;
         } else if ($this->session->userdata('role_id') == 2) {
             $data['matkul'] = $this->db->get_where('tb_dosen_matkul', ['nrp' => $this->session->userdata('nrp')])->result_array();
         }
