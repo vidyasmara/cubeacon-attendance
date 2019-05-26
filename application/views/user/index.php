@@ -20,10 +20,10 @@
                         </tr>
                         <?php foreach ($matkul as $mk) : ?>
                             <tr>
-                                <td><?php var_dump($mk['id_matkul']);
-                                    die;
-                                    $mk['id_matkul']; ?></td>
-                                <?php if ($absen['id_matkul'] == $mk['id_matkul']) { ?>
+                                <td><?= $mk['id_matkul']; ?></td>
+                                <?php var_dump($absen['id_matkul']);
+                                die;
+                                if ($absen['id_matkul'] == $mk['id_matkul']) { ?>
                                     <?php foreach ($absen as $a) { ?>
                                         <td><?= $a['id_matkul']; ?></td>
                                     <?php } ?>
