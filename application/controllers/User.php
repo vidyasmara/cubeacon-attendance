@@ -25,9 +25,9 @@ class User extends CI_Controller
     {
         $data['title'] = "My Profile";
         $user = $this->db->get_where('tb_user', ['nrp' => $this->session->userdata('nrp')])->row_array();
-        var_dump($user);
-        die;
         $data['email'] = $user['email'];
+        var_dump($data['email']);
+        die;
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar', $data);
         $this->load->view('template/topbar', $data);
