@@ -82,10 +82,10 @@
                                         <?php $i = 0; ?>
                                         <?php foreach ($matkul as $mk) : ?>
                                             <?php $i++;
-                                            $detMk = $this->db->get_where('tb_matakuliah', ['id_matkul' => $mk['id_matkul']])->row_array();
-                                            var_dump($detMk);
-                                            die; ?>
-                                            <td><?= $i; ?></td>
+                                            $detMk = $this->db->get_where('tb_matakuliah', ['id_matkul' => $mk['id_matkul']])->row_array(); ?>
+                                            <td>
+                                                <?= $i; ?>
+                                            </td>
                                             <td><?= $detMk['nama_matkul']; ?></td>
                                             <td><?= $detMk['ruang']; ?></td>
                                             <td><?= $detMk['waktu_mulai']; ?>.00 - <?= $detMk['waktu_selesai']; ?>.50</td>
