@@ -90,7 +90,7 @@
                                             <td><?= $detMk['ruang']; ?></td>
                                             <td><?= $detMk['waktu_mulai']; ?>.00 - <?= $detMk['waktu_selesai']; ?>.50</td>
                                             <td>21</td>
-                                            <td><a class="btn btn-warning" href="<?= base_url('dosen/') ?>detailmatkul.php">Detail</a></td>
+                                            <td><a class="btn btn-warning" href="<?= base_url('dosen/') ?>detailmatkul/<?= $mk['id_matkul']; ?>">Detail</a></td>
                                         <?php endforeach; ?>
                                     </tr>
                                 </tbody>

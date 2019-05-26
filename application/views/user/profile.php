@@ -56,9 +56,9 @@
                                 <img src="<?= base_url('assets/') ?>img/default.jpg" class="card-img">
                             </div>
                             <div class="col-lg-8">
-                                <p class="card-text">Name : </p>
-                                <p class="card-text">NIP : </p>
-                                <p class="card-text">Email : </p>
+                                <p class="card-text">Name : <?= $this->session->userdata('nama'); ?></p>
+                                <p class="card-text">NIP : <?= $this->session->userdata('nrp'); ?></p>
+                                <p class="card-text">Email : <?= $email; ?></p>
                             </div>
                         </div>
                     </div>
