@@ -82,7 +82,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Password :</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
+                                <input type="password" name="password" id="password" class="form-control">
                                 <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
                             <div class="form-group">
