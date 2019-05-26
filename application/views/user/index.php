@@ -20,7 +20,7 @@
                         </tr>
                         <?php foreach ($matkul as $mk) : ?>
                             <tr>
-                                <td><?= $mk; ?></td>
+                                <td><?= $mk['id_matkul']; ?></td>
                                 <?php if ($absen['id_matkul'] == $mk['id_matkul']) { ?>
                                     <?php foreach ($absen as $a) { ?>
                                         <td><?= $a['id_matkul']; ?></td>
