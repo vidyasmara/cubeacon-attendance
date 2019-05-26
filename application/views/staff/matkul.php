@@ -30,7 +30,7 @@
                             <td><?= $mk['ruang']; ?></td>
                             <td><?= $mk['mac_address']; ?></td>
                             <td><?= $mk['waktu_mulai']; ?>.00 - <?= $mk['waktu_selesai']; ?>.50</td>
-                            <?php $dosen = $this->db->get_where('user', ['nrp' => $mk['nip_dosen']])->row_array(); ?>
+                            <?php $dosen = $this->db->get_where('tb_user', ['nrp' => $mk['nip_dosen']])->row_array(); ?>
                             <td><?= $dosen['nama']; ?></td>
                             <td><a class="btn btn-warning" href="<?= base_url('dosen/detailmatkul/') . $mk['id_matkul']; ?>">Detail</a></td>
                         </tr>
