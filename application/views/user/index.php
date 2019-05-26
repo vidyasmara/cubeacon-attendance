@@ -61,7 +61,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <p class="card-text">NIP : <?= $this->session->userdata('nrp'); ?></p>
-                                <p class="card-text">Email : <?php $user['email']; ?></p>
+                                <p class="card-text">Email : <?= $user['email']; ?></p>
                             </div>
                         </div>
                         <div class="row mt-5 ml-3">
@@ -82,7 +82,9 @@
                                         <?php $i = 0; ?>
                                         <?php foreach ($matkul as $mk) : ?>
                                             <?php $i++;
-                                            $detMk = $this->db->get_where('tb_matakuliah', ['id_matkul' => $mk['id_matkul']])->row_array(); ?>
+                                            $detMk = $this->db->get_where('tb_matakuliah', ['id_matkul' => $mk['id_matkul']])->row_array();
+                                            var_dump($detMk);
+                                            die; ?>
                                             <td><?= $i; ?></td>
                                             <td><?= $detMk['nama_matkul']; ?></td>
                                             <td><?= $detMk['ruang']; ?></td>
