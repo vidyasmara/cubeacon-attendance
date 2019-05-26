@@ -73,7 +73,7 @@
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="" method="post">
-                            <h3 class="text-center text-info">Login Skuy</h3>
+                            <h3 class="text-center text-info">Cubetendance : Login</h3>
                             <?= $this->session->flashdata('message'); ?>
                             <div class="form-group">
                                 <label for="username" class="text-info">Username :</label><br>
