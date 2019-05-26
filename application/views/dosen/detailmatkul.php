@@ -14,13 +14,15 @@
                 <thead>
                     <tr>
                         <th>NRP</th>
-                        <th>timestamp</th>
+                        <th>Timestamp</th>
                     </tr>
                     <?php foreach ($absen as $abs) : ?>
-                        <tr>
-                            <td><?= $abs['nrp']; ?></td>
-                            <td><?= $abs['timestamp']; ?></td>
-                        </tr>
+                        <?php if ($abs['nrp'] != $this->session->userdata('nrp')) { ?>
+                            <tr>
+                                <td><?= $abs['nrp']; ?></td>
+                                <td><?= $abs['timestamp']; ?></td>
+                            </tr>
+                        <?php } ?>
                     <?php endforeach; ?>
                 </thead>
             </table>
