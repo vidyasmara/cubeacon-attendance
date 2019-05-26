@@ -20,7 +20,7 @@
                         </tr>
                         <?php foreach ($matkul as $mk) : ?>
                             <tr>
-                                <td><?php var_dump($mk);
+                                <td><?php var_dump($mk['id_matkul']);
                                     die;
                                     $mk['id_matkul']; ?></td>
                                 <?php if ($absen['id_matkul'] == $mk['id_matkul']) { ?>
