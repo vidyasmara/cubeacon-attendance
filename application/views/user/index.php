@@ -21,9 +21,10 @@
                         <?php foreach ($matkul as $mk) : ?>
                             <tr>
                                 <td><?= $mk; ?></td>
-                                <?php $absen = $this->db->get_where('tb_absen', ['id_matkul' => $mk])->result_array(); ?>
-                                <?php foreach ($absen as $a) { ?>
-                                    <td><?= $a['id_matkul']; ?></td>
+                                <?php if ($absen['id_matkul'] == $mk['id_matkul']) { ?>
+                                    <?php foreach ($absen as $a) { ?>
+                                        <td><?= $a['id_matkul']; ?></td>
+                                    <?php } ?>
                                 <?php } ?>
                             </tr>
                         <?php endforeach; ?>
