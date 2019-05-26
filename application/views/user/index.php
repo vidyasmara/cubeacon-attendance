@@ -21,8 +21,8 @@
                         <?php foreach ($matkul as $mk) : ?>
                             <tr>
                                 <td><?= $mk['id_matkul']; ?></td>
-                                <?php if ($absen['id_matkul'] == $mk['id_matkul']) { ?>
-                                    <?php foreach ($absen as $a) { ?>
+                                <?php foreach ($absen as $a) { ?>
+                                    <?php if ($a['id_matkul'] == $mk['id_matkul']) { ?>
                                         <td><?= $a['id_matkul']; ?></td>
                                     <?php } ?>
                                 <?php } ?>
