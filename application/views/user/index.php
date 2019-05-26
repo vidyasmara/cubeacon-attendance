@@ -14,27 +14,19 @@
                     <thead>
                         <tr>
                             <th>Mata Kuliah</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                            <th>6</th>
-                            <th>7</th>
-                            <th>8</th>
-                            <th>9</th>
-                            <th>10</th>
-                            <th>11</th>
-                            <th>12</th>
-                            <th>13</th>
-                            <th>14</th>
-                            <th>15</th>
-                            <th>16</th>
+                            <?php for ($i = 1; $i < 17; $i++) { ?>
+                                <th><?= $i; ?></th>
+                            <?php } ?>
                         </tr>
-
-                        <tr>
-                            <td>Jaringan Sensor Nirkabel dan IoT</td>
-                        </tr>
+                        <?php foreach ($matkul as $mk) : ?>
+                            <tr>
+                                <td><?= $mk; ?></td>
+                                <?php $absen = $this->db->get_where('tb_absen', ['id_matkul' => $mk])->result_array(); ?>
+                                <?php foreach ($absen as $a) { ?>
+                                    <td><?= $a['id_matkul']; ?></td>
+                                <?php } ?>
+                            </tr>
+                        <?php endforeach; ?>
                     </thead>
             </div>
         </div>

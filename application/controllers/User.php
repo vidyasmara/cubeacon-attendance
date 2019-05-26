@@ -7,11 +7,18 @@ class User extends CI_Controller
     public function index()
     {
         $data['title'] = "Dashboard";
+
+        if ($this->session->userdata('role_id') == 3) {
+            $data['matkul'] = $this->db->get_where('tb_mhs_matkul', ['nrp' => $this->session->userdata('nrp')])->result_array();
+            $data['absen'] = $this->db->get_where('tb_absen', ['nrp' => $this->session->userdata('nrp')])->result_array();
+        } else if ($this->session->userdata('role_id') == 2) {
+            $data['matkul'] = $this->db->get_where('tb_dosen_matkul', ['nrp' => $this->session->userdata('nrp')])->result_array();
+        }
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar', $data);
         $this->load->view('template/topbar', $data);
         $this->load->view('user/index', $data);
-        $this->load->view('template/footer', $data);
+        $this->load->view('template/footer');
     }
 
     public function profile()
