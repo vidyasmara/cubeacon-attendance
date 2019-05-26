@@ -16,7 +16,7 @@
                         <th>#</th>
                         <th>Mata Kuliah</th>
                         <th>Kelas</th>
-                        <th>MAC Address</th>
+                        <th>MAC Address Kelas</th>
                         <th>Waktu Kuliah</th>
                         <th>Dosen Pengajar</th>
                         <th>Detail</th>

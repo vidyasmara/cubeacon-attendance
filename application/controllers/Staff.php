@@ -12,8 +12,6 @@ class Staff extends CI_Controller
         $data['dosen'] = $this->db->get_where('tb_user', ['role_id' => 2])->result_array();
         $data['mahasiswa'] = $this->db->get_where('tb_user', ['role_id' => 3])->result_array();
 
-
-
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar', $data);
         $this->load->view('template/topbar', $data);
