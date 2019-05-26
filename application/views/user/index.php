@@ -111,13 +111,13 @@
             <div class="row">
                 <div class="col mr-5">
                     <div class="card border-left-primary shadow h-100 py-2">
-                        <a href="" class="btn btn-fix text-left">
+                        <a href="<?= base_url('staff/matkul') ?>" class="btn btn-fix text-left">
                             <div class="row">
                                 <div class="col-sm-8">
                                     <h5 class="card-title text-dark ">Data MK</h5>
                                 </div>
                                 <div class="col-sm-auto">
-                                    <i class="fas fa-exclamation-triangle fa-3x"></i>
+                                    <i class="fas fa-book fa-3x"></i>
                                 </div>
                             </div>
                         </a>
@@ -126,13 +126,13 @@
 
                 <div class="col mr-5">
                     <div class="card border-left-primary shadow h-100 py-2">
-                        <a href="" class="btn btn-fix text-left">
+                        <a href="<?= base_url('staff/dosen') ?>" class="btn btn-fix text-left">
                             <div class="row">
                                 <div class="col">
-                                    <h4 class="card-title text-dark ">Data Dosen</h4>
+                                    <h5 class="card-title text-dark ">Data Dosen</h5>
                                 </div>
                                 <div class="col">
-                                    <i class="fas fa-exclamation-triangle fa-3x"></i>
+                                    <i class="fas fa-chalkboard-teacher fa-3x"></i>
                                 </div>
                             </div>
                         </a>
@@ -141,13 +141,13 @@
 
                 <div class="col mr-5">
                     <div class="card border-left-primary shadow h-100 py-2">
-                        <a href="" class="btn btn-fix text-left">
+                        <a href="<?= base_url('staff/mahasiswa') ?>" class="btn btn-fix text-left">
                             <div class="row">
                                 <div class="col">
-                                    <h4 class="card-title text-dark ">Data Mahasiswa</h4>
+                                    <h5 class="card-title text-dark ">Data Mahasiswa</h5>
                                 </div>
                                 <div class="col">
-                                    <i class="fas fa-exclamation-triangle fa-3x"></i>
+                                    <i class="fas fa-address-card fa-3x"></i>
                                 </div>
                             </div>
                         </a>
