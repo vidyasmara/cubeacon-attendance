@@ -25,6 +25,8 @@ class User extends CI_Controller
     {
         $data['title'] = "My Profile";
         $user = $this->db->get_where('tb_user', ['nrp' => $this->session->userdata('nrp')])->row_array();
+        var_dump($user);
+        die;
         $data['email'] = $user['email'];
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar', $data);
@@ -32,7 +34,6 @@ class User extends CI_Controller
         $this->load->view('user/profile', $data);
         $this->load->view('template/footer', $data);
     }
-
 
     public function changePassword()
     {
