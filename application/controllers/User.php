@@ -9,7 +9,6 @@ class User extends CI_Controller
         $data['title'] = "Dashboard";
         $data['user'] = $this->db->get_where('tb_user', ['nrp' => $this->session->userdata('nrp')])->row_array();
         if ($this->session->userdata('role_id') == 3) {
-            $data['matkul'] = $this->db->get_where('tb_mhs_matkul', ['nrp' => $this->session->userdata('nrp')])->result_array();
             $data['absen'] = $this->db->get_where('tb_absen', ['nrp' => $this->session->userdata('nrp')])->result_array();
         } else if ($this->session->userdata('role_id') == 2) {
             $data['matkul'] = $this->db->get_where('tb_dosen_matkul', ['nip_dosen' => $this->session->userdata('nrp')])->result_array();

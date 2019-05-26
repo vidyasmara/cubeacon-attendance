@@ -14,20 +14,14 @@
                     <thead>
                         <tr>
                             <th>Mata Kuliah</th>
-                            <?php for ($i = 1; $i < 17; $i++) { ?>
-                                <th><?= $i; ?></th>
-                            <?php } ?>
+                            <th>Timestamp</th>
+
                         </tr>
-                        <?php foreach ($matkul as $mk) : ?>
+                        <?php foreach ($absen as $abs) : ?>
                             <tr>
-                                <?php $nama_matkul = $this->db->get_where('tb_matakuliah', ['id_matkul' => $mk['id_matkul']])->row_array(); ?>
+                                <?php $nama_matkul = $this->db->get_where('tb_matakuliah', ['id_matkul' => $abs['id_matkul']])->row_array(); ?>
                                 <td><?= $nama_matkul['nama_matkul']; ?></td>
-                                <?php foreach ($absen as $a) { ?>
-                                    <?php if ($a['id_matkul'] == $mk['id_matkul']) {
-                                        ?>
-                                        <td><?= $a['id_matkul']; ?></td>
-                                    <?php } ?>
-                                <?php } ?>
+                                <td><?= $abs['timestamp']; ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </thead>
@@ -43,7 +37,7 @@
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Mata Kuliah</h1>
+            <h1 class="h3 mb-0 text-gray-800"><?= $title; ?></h1>
         </div>
 
         <!-- Content Row -->
