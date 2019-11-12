@@ -24,6 +24,7 @@ class Auth extends CI_Controller
         }
     }
 
+    #login
     private function _login()
     {
         #mengambil data yg diinput oleh user

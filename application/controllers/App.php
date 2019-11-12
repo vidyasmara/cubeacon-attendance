@@ -9,7 +9,7 @@ class App extends CI_Controller
         $data = [
             'nrp' => 1,
             'id_matkul' => 1,
-            'nip' => $this->input->post('id'),
+            'nip' => $this->input->post('mac_address'),
             'waktu' => 1
         ];
         $this->db->insert('tb_absen', $data);
