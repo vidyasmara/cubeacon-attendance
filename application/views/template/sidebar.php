@@ -58,8 +58,10 @@
         <hr class="sidebar-divider mt-3">
 
         <li class="nav-item">
-            <i class="fas fa-fw fa-sign-out-alt"></i>
-            <span><a href="<?= base_url('auth/logout') ?>">Logout</a></span>
+            <a href="<?= base_url('auth/logout') ?>">
+                <i class="fas fa-fw fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
         </li>
 
         <!-- Sidebar Toggler (Sidebar) -->
