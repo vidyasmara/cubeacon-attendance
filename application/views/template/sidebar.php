@@ -58,10 +58,8 @@
         <hr class="sidebar-divider mt-3">
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="modal" data-target="#logoutModal">
-                <i class="fas fa-fw fa-sign-out-alt"></i>
-                <span>Logout</span>
-            </a>
+            <i class="fas fa-fw fa-sign-out-alt"></i>
+            <span><a href="<?= base_url('auth/logout') ?>">Logout</a></span>
         </li>
 
         <!-- Sidebar Toggler (Sidebar) -->
