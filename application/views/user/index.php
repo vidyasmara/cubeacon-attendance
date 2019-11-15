@@ -80,39 +80,40 @@
                             <p class="card-text">NIP : <?= $this->session->userdata('nrp'); ?></p>
                             <p class="card-text">Email : <?= $user['email']; ?></p>
                         </div>
-                    </div>
-                    <div class="row mt-5 ml-3">
-                        <h4>Jadwal Mengajar</h4>
-                        <div class="table-responsive">
-                            <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Mata Kuliah</th>
-                                        <th scope="col">Kelas</th>
-                                        <th scope="col">Waktu Kuliah</th>
-                                        <th scope="col">Jumlah Mahasiswa</th>
-                                        <th scope="col">Detail</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <?php $i = 0; ?>
-                                        <?php foreach ($matkul as $mk) : ?>
-                                            <?php $i++;
-                                                    $detMk = $this->db->get_where('tb_matakuliah', ['id_matkul' => $mk['id_matkul']])->row_array(); ?>
-                                            <td>
-                                                <?= $i; ?>
-                                            </td>
-                                            <td><?= $detMk['nama_matkul']; ?></td>
-                                            <td><?= $detMk['ruang']; ?></td>
-                                            <td><?= $detMk['waktu_mulai']; ?>.00 - <?= $detMk['waktu_selesai']; ?>.50</td>
-                                            <td>21</td>
-                                            <td><a class="btn btn-warning" href="<?= base_url('dosen/') ?>detailmatkul/<?= $mk['id_matkul']; ?>">Detail</a></td>
-                                        <?php endforeach; ?>
-                                    </tr>
-                                </tbody>
-                            </table>
+
+                        <div class="row mt-5 ml-3">
+                            <h4>Jadwal Mengajar</h4>
+                            <div class="table-responsive">
+                                <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Mata Kuliah</th>
+                                            <th scope="col">Kelas</th>
+                                            <th scope="col">Waktu Kuliah</th>
+                                            <th scope="col">Jumlah Mahasiswa</th>
+                                            <th scope="col">Detail</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <?php $i = 0; ?>
+                                            <?php foreach ($matkul as $mk) : ?>
+                                                <?php $i++;
+                                                        $detMk = $this->db->get_where('tb_matakuliah', ['id_matkul' => $mk['id_matkul']])->row_array(); ?>
+                                                <td>
+                                                    <?= $i; ?>
+                                                </td>
+                                                <td><?= $detMk['nama_matkul']; ?></td>
+                                                <td><?= $detMk['ruang']; ?></td>
+                                                <td><?= $detMk['waktu_mulai']; ?>.00 - <?= $detMk['waktu_selesai']; ?>.50</td>
+                                                <td>21</td>
+                                                <td><a class="btn btn-warning" href="<?= base_url('dosen/') ?>detailmatkul/<?= $mk['id_matkul']; ?>">Detail</a></td>
+                                            <?php endforeach; ?>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
