@@ -60,6 +60,7 @@
 
         <!-- Content Row -->
 
+<<<<<<< HEAD
         <div class="row">
             <div class="col">
                 <div class="card shadow mb-4 border-left-primary">
@@ -70,6 +71,23 @@
                         <div class="row">
                             <div class="col-lg-3">
                                 <img src="<?= base_url('assets/') ?>img/default.jpg" class="card-img">
+=======
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-4 border-left-primary" style="width:200%">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary" style="width:200%"><?= $this->session->userdata('nama'); ?></h6>
+                        </div>
+                        <div class="card-body" style="width:200%">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <img src="<?= base_url('assets/') ?>img/default.jpg" class="card-img">
+                                </div>
+                                <div class="col-lg-4">
+                                    <p class="card-text">NIP : <?= $this->session->userdata('nrp'); ?></p>
+                                    <p class="card-text">Email : <?= $user['email']; ?></p>
+                                </div>
+>>>>>>> b7e653ff986c796fe9b24ec5837ba2e2025a98c6
                             </div>
                             <div class="col-lg-4">
                                 <p class="card-text">NIP : <?= $this->session->userdata('nrp'); ?></p>
