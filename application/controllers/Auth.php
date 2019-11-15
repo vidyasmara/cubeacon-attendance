@@ -6,7 +6,7 @@ class Auth extends CI_Controller
 
     public function index()
     {
-        if ($this->session->userdata('email')) {
+        if ($this->session->userdata('nama')) {
             redirect(base_url('user'));
         }
 
