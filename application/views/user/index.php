@@ -62,9 +62,9 @@
 
         <div class="row">
             <div class="col">
-                <div class="card shadow mb-4 border-left-primary" style="width:200%">
+                <div class="card shadow mb-4 border-left-primary">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary" style="width:200%"><?= $this->session->userdata('nama'); ?></h6>
+                        <h6 class="m-0 font-weight-bold text-primary"><?= $this->session->userdata('nama'); ?></h6>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
