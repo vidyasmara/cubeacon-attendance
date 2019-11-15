@@ -6,7 +6,6 @@ class Auth extends CI_Controller
 
     public function index()
     {
-
         if ($this->session->userdata('email')) {
             redirect(base_url('user'));
         }
@@ -67,7 +66,7 @@ class Auth extends CI_Controller
 
     public function logout()
     {
-        $this->session->unset_userdata('username');
+        $this->session->unset_userdata('nrp');
         $this->session->unset_userdata('role_id');
         $this->session->unset_userdata('nama');
 
