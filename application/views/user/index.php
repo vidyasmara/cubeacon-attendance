@@ -67,18 +67,19 @@
                         <h6 class="m-0 font-weight-bold text-primary" style="width:200%"><?= $this->session->userdata('nama'); ?></h6>
                     </div>
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <img src="<?= base_url('assets/') ?>img/default.jpg" class="card-img">
+                        <div class="table-responsive">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <img src="<?= base_url('assets/') ?>img/default.jpg" class="card-img">
+                                </div>
+                                <div class="col-lg-4">
+                                    <p class="card-text">NIP : <?= $this->session->userdata('nrp'); ?></p>
+                                    <p class="card-text">Email : <?= $user['email']; ?></p>
+                                </div>
                             </div>
-                            <div class="col-lg-4">
-                                <p class="card-text">NIP : <?= $this->session->userdata('nrp'); ?></p>
-                                <p class="card-text">Email : <?= $user['email']; ?></p>
-                            </div>
-                        </div>
-                        <div class="row mt-5 ml-3">
-                            <h4>Jadwal Mengajar</h4>
-                            <div class="table-responsive">
+                            <div class="row mt-5 ml-3">
+                                <h4>Jadwal Mengajar</h4>
+
                                 <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
