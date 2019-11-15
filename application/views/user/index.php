@@ -119,80 +119,64 @@
 
 <?php } else if ($this->session->userdata('role_id') == 1) { ?>
     <!-- Begin Page Content -->
-    <style>
-        div.scrollmenu {
-            overflow: auto;
-            white-space: nowrap;
-        }
+    <div class="container-fluid">
 
-        div.scrollmenu a {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px;
-            text-decoration: none;
-        }
-    </style>
-    <div class="scrollmenu">
-        <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Data Civitas Akademika</h1>
+        </div>
 
-            <!-- Page Heading -->
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Data Civitas Akademika</h1>
-            </div>
-
-            <!-- Content Row -->
-            <div class="container">
-                <div class="row">
-                    <div class="col mr-5">
-                        <div class="card border-left-primary shadow h-100 py-2">
-                            <a href="<?= base_url('staff/matkul') ?>" class="btn btn-fix text-left">
-                                <div class="row">
-                                    <div class="col-sm-8">
-                                        <h5 class="card-title text-dark ">Data MK</h5>
-                                    </div>
-                                    <div class="col-sm-auto">
-                                        <i class="fas fa-book fa-3x"></i>
-                                    </div>
+        <!-- Content Row -->
+        <div class="container">
+            <div class="row">
+                <div class="col mr-5">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <a href="<?= base_url('staff/matkul') ?>" class="btn btn-fix text-left">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h5 class="card-title text-dark ">Data MK</h5>
                                 </div>
-                            </a>
-                        </div>
+                                <div class="col-sm-auto">
+                                    <i class="fas fa-book fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>
                     </div>
+                </div>
 
-                    <div class="col mr-5">
-                        <div class="card border-left-primary shadow h-100 py-2">
-                            <a href="<?= base_url('staff/dosen') ?>" class="btn btn-fix text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="card-title text-dark ">Data Dosen</h5>
-                                    </div>
-                                    <div class="col">
-                                        <i class="fas fa-chalkboard-teacher fa-3x"></i>
-                                    </div>
+                <div class="col mr-5">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <a href="<?= base_url('staff/dosen') ?>" class="btn btn-fix text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title text-dark ">Data Dosen</h5>
                                 </div>
-                            </a>
-                        </div>
+                                <div class="col">
+                                    <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>
                     </div>
+                </div>
 
-                    <div class="col mr-5">
-                        <div class="card border-left-primary shadow h-100 py-2">
-                            <a href="<?= base_url('staff/mahasiswa') ?>" class="btn btn-fix text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        <h5 class="card-title text-dark ">Data Mahasiswa</h5>
-                                    </div>
-                                    <div class="col">
-                                        <i class="fas fa-address-card fa-3x"></i>
-                                    </div>
+                <div class="col mr-5">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <a href="<?= base_url('staff/mahasiswa') ?>" class="btn btn-fix text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title text-dark ">Data Mahasiswa</h5>
                                 </div>
-                            </a>
-                        </div>
+                                <div class="col">
+                                    <i class="fas fa-address-card fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <!-- End of Content Wrapper -->
-
         </div>
+        <!-- End of Content Wrapper -->
+
     </div>
     <!-- End of Page Wrapper -->
-    <?php } ?>dsxfgc6t345ycvg65tgyfr56ftgyr65
+<?php } ?>
