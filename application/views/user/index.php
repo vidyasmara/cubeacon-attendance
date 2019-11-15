@@ -66,7 +66,7 @@
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary" style="width:200%"><?= $this->session->userdata('nama'); ?></h6>
                     </div>
-                    <div class="card-body" style="width:200%">
+                    <div class="card-body">
                         <div class="row">
                             <div class="col-lg-3">
                                 <img src="<?= base_url('assets/') ?>img/default.jpg" class="card-img">
@@ -84,7 +84,6 @@
                     <div class="row mt-5 ml-3">
                         <h4>Jadwal Mengajar</h4>
                         <div class="table-responsive">
-
                             <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
