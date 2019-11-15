@@ -76,11 +76,6 @@
                                 <p class="card-text">Email : <?= $user['email']; ?></p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <p class="card-text">NIP : <?= $this->session->userdata('nrp'); ?></p>
-                            <p class="card-text">Email : <?= $user['email']; ?></p>
-                        </div>
-
                         <div class="row mt-5 ml-3">
                             <h4>Jadwal Mengajar</h4>
                             <div class="table-responsive">
