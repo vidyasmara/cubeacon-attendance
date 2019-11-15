@@ -7,7 +7,7 @@ class Staff extends CI_Controller
     public function matkul()
     {
         if (!$this->session->userdata('nama')) {
-            redirect(base_url('auth/login'));
+            redirect(base_url('auth'));
         }
         $data['title'] = "Data Mata Kuliah";
         $data['user'] = $this->db->get_where('tb_user', ['nrp' => $this->session->userdata('nrp')])->row_array();
@@ -23,7 +23,7 @@ class Staff extends CI_Controller
     public function dosen()
     {
         if (!$this->session->userdata('nama')) {
-            redirect(base_url('auth/login'));
+            redirect(base_url('auth'));
         }
         $data['title'] = "Data Dosen";
         $data['user'] = $this->db->get_where('tb_user', ['nrp' => $this->session->userdata('nrp')])->row_array();
@@ -40,7 +40,7 @@ class Staff extends CI_Controller
     public function mahasiswa()
     {
         if (!$this->session->userdata('nama')) {
-            redirect(base_url('auth/login'));
+            redirect(base_url('auth'));
         }
         $data['title'] = "Data Mahasiswa";
         $data['user'] = $this->db->get_where('tb_user', ['nrp' => $this->session->userdata('nrp')])->row_array();
