@@ -5,7 +5,7 @@ class Dosen extends CI_Controller
 {
     public function detailmatkul($kodematkul)
     {
-        if (!$this->session->userdata('nrp')) {
+        if (!$this->session->userdata('nama')) {
             redirect(base_url('auth/login'));
         }
         $matkul = $this->db->get_where('tb_matakuliah', ['id_matkul' => $kodematkul])->row_array();

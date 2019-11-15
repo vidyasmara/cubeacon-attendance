@@ -6,7 +6,7 @@ class User extends CI_Controller
 
     public function index()
     {
-        if (!$this->session->userdata('nrp')) {
+        if (!$this->session->userdata('nama')) {
             redirect(base_url('auth/login'));
         }
         $data['title'] = "Dashboard";
@@ -25,7 +25,7 @@ class User extends CI_Controller
 
     public function profile()
     {
-        if (!$this->session->userdata('nrp')) {
+        if (!$this->session->userdata('nama')) {
             redirect(base_url('auth/login'));
         }
         $data['title'] = "My Profile";
@@ -40,7 +40,7 @@ class User extends CI_Controller
 
     public function changePassword()
     {
-        if (!$this->session->userdata('nrp')) {
+        if (!$this->session->userdata('nama')) {
             redirect(base_url('auth/login'));
         }
         $data['user'] = $this->db->get_where('tb_user', ['nrp' => $this->session->userdata('nrp')])->row_array();

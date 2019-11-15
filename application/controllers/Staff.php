@@ -6,7 +6,7 @@ class Staff extends CI_Controller
 
     public function matkul()
     {
-        if (!$this->session->userdata('nrp')) {
+        if (!$this->session->userdata('nama')) {
             redirect(base_url('auth/login'));
         }
         $data['title'] = "Data Mata Kuliah";
@@ -22,7 +22,7 @@ class Staff extends CI_Controller
 
     public function dosen()
     {
-        if (!$this->session->userdata('nrp')) {
+        if (!$this->session->userdata('nama')) {
             redirect(base_url('auth/login'));
         }
         $data['title'] = "Data Dosen";
@@ -39,7 +39,7 @@ class Staff extends CI_Controller
 
     public function mahasiswa()
     {
-        if (!$this->session->userdata('nrp')) {
+        if (!$this->session->userdata('nama')) {
             redirect(base_url('auth/login'));
         }
         $data['title'] = "Data Mahasiswa";
