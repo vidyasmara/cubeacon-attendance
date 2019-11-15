@@ -10,22 +10,24 @@
 
     <div class="container">
         <div class="row">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>NRP</th>
-                        <th>Timestamp</th>
-                    </tr>
-                    <?php foreach ($absen as $abs) : ?>
-                        <?php if ($abs['nrp'] != $this->session->userdata('nrp')) { ?>
-                            <tr>
-                                <td><?= $abs['nrp']; ?></td>
-                                <td><?= $abs['timestamp']; ?></td>
-                            </tr>
-                        <?php } ?>
-                    <?php endforeach; ?>
-                </thead>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>NRP</th>
+                            <th>Timestamp</th>
+                        </tr>
+                        <?php foreach ($absen as $abs) : ?>
+                            <?php if ($abs['nrp'] != $this->session->userdata('nrp')) { ?>
+                                <tr>
+                                    <td><?= $abs['nrp']; ?></td>
+                                    <td><?= $abs['timestamp']; ?></td>
+                                </tr>
+                            <?php } ?>
+                        <?php endforeach; ?>
+                    </thead>
+                </table>
+            </div>
         </div>
     </div>
     <!-- End of Content Wrapper -->
