@@ -38,7 +38,6 @@
     <!-- Begin Page Content -->
     <style>
         div.scrollmenu {
-            background-color: #333;
             overflow: auto;
             white-space: nowrap;
         }
@@ -49,10 +48,6 @@
             text-align: center;
             padding: 14px;
             text-decoration: none;
-        }
-
-        div.scrollmenu a:hover {
-            background-color: #777;
         }
     </style>
     <div class="scrollmenu">
